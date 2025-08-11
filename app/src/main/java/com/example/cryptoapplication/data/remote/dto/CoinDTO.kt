@@ -1,5 +1,6 @@
 package com.example.cryptoapplication.data.remote.dto
 
+import com.example.cryptoapplication.domain.model.Coin
 import com.google.gson.annotations.SerializedName
 
 data class CoinDTO(
@@ -13,3 +14,13 @@ data class CoinDTO(
     val symbol: String,
     val type: String
 )
+
+fun CoinDTO.toCoin(): Coin{
+    return Coin(
+        id = id,
+        isActive = isActive,
+        name = name,
+        rank = rank,
+        symbol = symbol
+    )
+}
