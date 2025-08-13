@@ -34,7 +34,7 @@ class CoinListViewModel @Inject
                     _state.value = CoinListState(coins = result.data?: emptyList())
                 }
                 is Resource.Error -> {
-                    _state.value = CoinListState(error = result.message ?: "An unexpected error occured")
+                    _state.value = CoinListState(error = result.message ?: "An unexpected error occurred")
                 }
                 is Resource.Loading -> {
                     _state.value = CoinListState(isLoading = true)
