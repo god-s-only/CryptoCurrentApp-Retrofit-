@@ -43,6 +43,7 @@ android {
 
 dependencies {
 
+    val nav_version = "2.9.1"
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -71,4 +72,6 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.56.2")
     ksp("com.google.dagger:hilt-android-compiler:2.56.2")
+    implementation("androidx.navigation:navigation-compose:${nav_version}")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 }
